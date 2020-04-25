@@ -3,9 +3,11 @@ import { Jumbotron as Jumbo, Container} from 'react-bootstrap';
 import styled from 'styled-components';
 import boat from '../Assets/boat.jpg';
 
+
+
 const Styles = styled.div`
     .jumbo{
-        background: url(${boat}) no-reapeat fixed bottom;
+        background: url(${boat}) no-repeat;
         background-size: cover;
         color: #ccc;
         heigth: 200px;
