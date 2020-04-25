@@ -3,10 +3,12 @@ import backVideo from './Assets/backVideo.mp4';
 import styled from 'styled-components';
 
 const Styles = styled.div`
-    .promoVideo{
-        text-align: right;
-    }
 
+    .promoVideo{
+        max-heigth: 100vh;
+        max-width: 2000px;
+    }
+    
 `;
 
 
