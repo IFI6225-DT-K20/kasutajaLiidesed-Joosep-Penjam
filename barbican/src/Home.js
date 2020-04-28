@@ -1,28 +1,92 @@
 import React from 'react'
-import backVideo from './Assets/backVideo.mp4';
 import styled from 'styled-components';
+import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
+import { Button} from 'react-bootstrap';
+// eslint-disable-next-line
+import backVideo from './Assets/backVideo.mp4';
+import boat from './Assets/boat.jpg';
 
-const Styles = styled.div`
+const Styles = styled.div `
 
-    .promoVideo{
-        max-heigth: 100vh;
-        max-width: 2000px;
+    h1{
+        font-family: sans-serif;
+        font-size: 5rem;
+        font-weight: bold;
     }
-    
-`;
 
+    .jumbotron{
+       background: url(${boat}) no-repeat fixed bottom;
+       background-size: cover;
+       color: white;
+       height: 600px;
+       position: relative;
+       z-index: -2;
+       margin-bottom: 0;
+    }
+
+    button{
+        z-index: 1;
+        background-color: #ff5900;
+    }
+
+    .overlay{
+        background-color: #000;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .newsLetter{
+        background-color: #ff5900;
+        height: 100px;
+    }
+
+    .footer{
+        background-color: #1d1d1d;
+        color:white;
+    }
+
+`;
 
 export const Home = () => (
     <Styles>
-        <div>
-            <video autoPlay="autoPlay" loop="loop" muted className="promoVideo">
-                <source src={backVideo} type="video/mp4"/>
-            </video>
+        <Jumbo fluid className="jumbo">
+            <div className="overlay"></div>
+            <Container>
+                <h1>Welcome to</h1>
+                <h1>the Barbican</h1>
 
-            <p>Siin on paragraph mille pikkus on adekvaatne</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut facilisis ex. Etiam vitae felis ac justo luctus pellentesque non vel dui. Praesent imperdiet lacus sed lacinia lacinia. Sed porttitor ipsum ac orci blandit interdum. Nulla id augue dictum, rutrum odio eu, tempor justo. Curabitur pellentesque scelerisque commodo. Fusce et ultricies justo, eget lobortis velit.</p>
-            <p>Proin non consectetur diam. Vivamus mollis rutrum libero gravida euismod. Mauris in vestibulum arcu. Mauris sit amet risus non elit elementum imperdiet. Quisque consequat libero eget imperdiet scelerisque. Nulla rhoncus nunc id justo interdum, nec aliquet velit posuere. Nunc euismod, nisl eu sodales luctus, magna est rhoncus sem, non bibendum nisl libero suscipit augue. Sed vel luctus mauris. Curabitur congue, dolor quis bibendum efficitur, velit felis ornare odio, vitae iaculis felis turpis eu leo.</p>
+                <Button variant="primary" size="lg">
+                    -> Read, watch & listen
+                </Button>{' '}
+            </Container>
+        </Jumbo>
+
+        <div className="newsLetter">
+            <p>Sign up to our newsletter</p>
+            <Button variant="primary" size="lg">
+                    -> Sign up
+            </Button>{' '}
+        </div>
+
+        <div className="footer">
+            <h2>Contact us</h2>
+            <p>About</p>
+            <h3>Contact the Box office</h3>
         </div>
     </Styles>
 )
 
+/*<div>
+    <video autoPlay="autoPlay" loop="loop" muted className="promoVideo">
+        <source src={backVideo} type="video/mp4"/>
+    </video>
+
+    <div className="promoText"> 
+        <p>Tere</p>
+    </div>
+</div>*/
