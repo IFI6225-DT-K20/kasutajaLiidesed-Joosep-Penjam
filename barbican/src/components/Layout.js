@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 
 
 export const Layout = (props) => (
-    <Container fluid padding-left="0">
+    <Container fluid >
         {props.children}
     </Container>
 )

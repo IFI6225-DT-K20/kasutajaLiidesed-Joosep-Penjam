@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
-import { Button} from 'react-bootstrap';
+import { Image,Button} from 'react-bootstrap';
 // eslint-disable-next-line
 import backVideo from './Assets/backVideo.mp4';
 import boat from './Assets/boat.jpg';
+import newsletters from './Assets/newsletters.png';
 
 const Styles = styled.div `
 
@@ -44,6 +45,8 @@ const Styles = styled.div `
         background-color: #ff5900;
         height: 100px;
     }
+    
+    
 
     .footer{
         background-color: #1d1d1d;
@@ -59,7 +62,6 @@ export const Home = () => (
             <Container>
                 <h1>Welcome to</h1>
                 <h1>the Barbican</h1>
-
                 <Button variant="primary" size="lg">
                     -> Read, watch & listen
                 </Button>{' '}
@@ -68,6 +70,7 @@ export const Home = () => (
 
         <div className="newsLetter">
             <p>Sign up to our newsletter</p>
+            {/*<Image src={newsletters}></Image>*/}
             <Button variant="primary" size="lg">
                     -> Sign up
             </Button>{' '}
@@ -77,6 +80,7 @@ export const Home = () => (
             <h2>Contact us</h2>
             <p>About</p>
             <h3>Contact the Box office</h3>
+            <p>For queries relating to you booking, please see our FAQs or contact us on:</p>
         </div>
     </Styles>
 )

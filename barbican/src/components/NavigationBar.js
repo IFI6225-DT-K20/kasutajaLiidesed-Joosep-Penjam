@@ -10,10 +10,11 @@ const Styles = styled.div`
 
     .navbar-brand, .navbar-nav .nav-link {
         font-family: sans-serif;
+        font-weigth: bold;
         color: white;
 
         &:hover{
-            color: white;
+            color: grey;
         }
     }
 
@@ -26,9 +27,17 @@ const Styles = styled.div`
 export const NavigationBar = () => (
     <Styles>
         <Navbar expand="lg">
-            <Navbar.Brand href="/">barbican</Navbar.Brand>
+            <Navbar.Brand href="./home">barbican</Navbar.Brand>
             
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            
+        </Navbar>
+
+        
+    </Styles>
+)
+
+/*
+<Navbar.Toggle aria-controls="basic-navbar-nav" />
             
             <Navbar.Collapse className="collapse" id="basic-navbar-nav" >
                 <Nav className="ml-auto">
@@ -37,8 +46,6 @@ export const NavigationBar = () => (
                     <Nav.Item><Nav.Link href="/contact">Contact</Nav.Link></Nav.Item>
                 </Nav>
             </Navbar.Collapse>
-        </Navbar>
 
-        
-    </Styles>
-)
+
+*/ 
