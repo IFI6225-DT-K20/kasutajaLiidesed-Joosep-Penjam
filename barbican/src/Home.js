@@ -9,10 +9,16 @@ import newsletters from './Assets/newsletters.png';
 
 const Styles = styled.div `
 
+    
+
     h1{
-        font-family: sans-serif;
+        font-family: Futura-Book,Arial,Helvetica,sans-serif;
         font-size: 5rem;
         font-weight: bold;
+    }
+
+    .container{
+        
     }
 
     .jumbotron{
@@ -23,11 +29,21 @@ const Styles = styled.div `
        position: relative;
        z-index: -2;
        margin-bottom: 0;
+       
     }
 
     button{
         z-index: 1;
         background-color: #ff5900;
+        border-color: #ff5900;
+    }
+
+    .newsButton{
+        color: #ff5900;
+        background-color: white;
+        border-color: #ff5900;
+        
+        
     }
 
     .overlay{
@@ -47,7 +63,6 @@ const Styles = styled.div `
     }
     
     
-
     .footer{
         background-color: #1d1d1d;
         color:white;
@@ -57,21 +72,22 @@ const Styles = styled.div `
 
 export const Home = () => (
     <Styles>
-        <Jumbo fluid className="jumbo">
+        <Jumbo className="jumbo">
             <div className="overlay"></div>
-            <Container>
+            <Container className="welcomeText">
                 <h1>Welcome to</h1>
                 <h1>the Barbican</h1>
                 <Button variant="primary" size="lg">
                     -> Read, watch & listen
                 </Button>{' '}
+
             </Container>
         </Jumbo>
 
         <div className="newsLetter">
             <p>Sign up to our newsletter</p>
             {/*<Image src={newsletters}></Image>*/}
-            <Button variant="primary" size="lg">
+            <Button className="newsButton" variant="primary" size="lg">
                     -> Sign up
             </Button>{' '}
         </div>

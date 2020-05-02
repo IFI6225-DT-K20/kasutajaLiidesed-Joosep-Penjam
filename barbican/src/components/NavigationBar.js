@@ -9,7 +9,7 @@ const Styles = styled.div`
     }
 
     .navbar-brand, .navbar-nav .nav-link {
-        font-family: sans-serif;
+        font-family: Futura-Book,Arial,Helvetica,sans-serif;
         font-weigth: bold;
         color: white;
 
@@ -31,8 +31,6 @@ export const NavigationBar = () => (
             
             
         </Navbar>
-
-        
     </Styles>
 )
 

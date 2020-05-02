@@ -1,12 +1,14 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-/*import styled from 'styled-components';*/
+import Containers from 'react-bootstrap/Container';
+import styled from 'styled-components';
 
+const Container = styled.div`
+    
 
-
+`;
 
 export const Layout = (props) => (
-    <Container fluid >
+    <Container fluid>
         {props.children}
     </Container>
 )
