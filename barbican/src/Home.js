@@ -9,16 +9,10 @@ import newsletters from './Assets/newsletters.png';
 
 const Styles = styled.div `
 
-    
-
     h1{
         font-family: Futura-Book,Arial,Helvetica,sans-serif;
         font-size: 5rem;
         font-weight: bold;
-    }
-
-    .container{
-        
     }
 
     .jumbotron{
@@ -29,20 +23,23 @@ const Styles = styled.div `
        position: relative;
        z-index: -2;
        margin-bottom: 0;
-       
     }
 
     button{
+        font-weight: bold;
+    }
+
+    .welcomeBtn{
         z-index: 1;
         background-color: #ff5900;
         border-color: #ff5900;
+        
     }
 
     .newsButton{
         color: #ff5900;
         background-color: white;
         border-color: #ff5900;
-        
         
     }
 
@@ -59,9 +56,9 @@ const Styles = styled.div `
 
     .newsLetter{
         background-color: #ff5900;
-        height: 100px;
+        height: 150px;
+        font-weight: bold;
     }
-    
     
     .footer{
         background-color: #1d1d1d;
@@ -77,10 +74,9 @@ export const Home = () => (
             <Container className="welcomeText">
                 <h1>Welcome to</h1>
                 <h1>the Barbican</h1>
-                <Button variant="primary" size="lg">
+                <Button className="welcomeBtn" variant="primary" size="lg">
                     -> Read, watch & listen
                 </Button>{' '}
-
             </Container>
         </Jumbo>
 
