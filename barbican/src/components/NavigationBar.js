@@ -8,28 +8,45 @@ const Styles = styled.div`
 
     .navbar, .dropdown{
         background-color: #ff5900;
-        
     }
 
     .iconBar{
         border-bottom: 1px solid #ededed;
     }
     
+    formControl{
+        width: 200px;
+    }
+
     button{
+        border-color: #ff5900;
         color:white;
         font-weight: bold;
     }
 
+    .searchBar{
+        margin-left:auto; 
+        margin-right:0;
+    }
+
     .mr-sm-2{
-        width: 100px;
+        width: 150px;
         background-color: #ff5900;
         border-color: #ff5900;
 
         &:active{
-            
+            border-color: #ff5900;
         }
     }
-    
+
+    #searchBtn{
+
+        &:hover{
+            background-color: #ff1200;
+            border-color: #ff5900;
+        }
+    }
+
     .navbar-brand, .navbar-nav .nav-link {
         font-family: Futura-Book,Arial,Helvetica,sans-serif;
         font-weigth: bold;
@@ -48,17 +65,23 @@ const Styles = styled.div`
 
 export const NavigationBar = () => (
     <Styles>
-
-        <Navbar className="iconBar" expand="lg">
-            <Navbar.Brand href="/"><Image src={logo}></Image></Navbar.Brand>
-
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-info">Search</Button>
-        </Navbar>
+        
+            <Navbar className="iconBar" expand="lg">
+                <Container>
+                    <Navbar.Brand href="/"><Image src={logo}></Image></Navbar.Brand>
+                    
+                    <Navbar className="searchBar">
+                        <FormControl type="text" placeholder="Search site" className="mr-sm-2" />
+                        <Button id="searchBtn" variant="outline-info">Search </Button>
+                    </Navbar>
+                </Container>
+            </Navbar>
+        
 
         <Navbar className="navMenu">
+            <Container>
             <>  
-                {['Whats on', 'Your visit', 'Join & support', 'Take part'].map(
+                {['Whats on', 'Your visit', 'Join & support', 'Take part', 'Our story', 'Hire', 'Read, watch & listen'].map(
                     (variant) => (
                         <>
                             <DropdownButton
@@ -79,7 +102,9 @@ export const NavigationBar = () => (
                         </>
                     ),
                 )}
+            
             </>
+            </Container>
         </Navbar>
     </Styles>
     

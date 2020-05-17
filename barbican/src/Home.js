@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
-import { Image,Button} from 'react-bootstrap';
+import { Image, Button, Jumbotron as Jumbo, Container } from 'react-bootstrap';
 // eslint-disable-next-line
 import backVideo from './Assets/backVideo.mp4';
+// eslint-disable-next-line
 import boat from './Assets/boat.jpg';
 import newsletters from './Assets/newsletters.png';
 
@@ -16,7 +16,7 @@ const Styles = styled.div `
     }
 
     .jumbotron{
-       background: url(${boat}) no-repeat fixed bottom;
+       background: url(${backVideo}) no-repeat fixed bottom;
        background-size: cover;
        color: white;
        height: 600px;
@@ -33,6 +33,7 @@ const Styles = styled.div `
         z-index: 1;
         background-color: #ff5900;
         border-color: #ff5900;
+        margin-top: 20px;
         
     }
 
@@ -43,9 +44,21 @@ const Styles = styled.div `
         
     }
 
+    video{
+        position: absolute; 
+        right: 0; 
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        width: auto; 
+        height: auto; 
+        z-index: -100;
+        background-size: cover;
+        overflow: hidden;
+    }
+
     .overlay{
-        background-color: #000;
-        opacity: 0.6;
+        background-color: #222;
         position: absolute;
         top: 0;
         left: 0;
@@ -58,19 +71,41 @@ const Styles = styled.div `
         background-color: #ff5900;
         height: 150px;
         font-weight: bold;
+        
+    }
+    #signUp{
+        text-align: center;
+        padding-left: 480px;
+    }
+
+    img{
+        
+        max-width:100%;
+        max-height:100%;
+        padding-left: 40%;
+    
     }
     
     .footer{
+        height: 100%;
         background-color: #1d1d1d;
         color:white;
-    }
+        padding-bottom: 10px;
+        margin-bottom: 0;
+        
 
+    }
 `;
 
 export const Home = () => (
     <Styles>
         <Jumbo className="jumbo">
-            <div className="overlay"></div>
+            <div className="overlay">
+                <video autoPlay="autoPlay" loop="loop" muted className="promoVideo">
+                    <source src={backVideo} type="video/mp4"/>
+                </video>
+            </div>
+            
             <Container className="welcomeText">
                 <h1>Welcome to</h1>
                 <h1>the Barbican</h1>
@@ -81,8 +116,8 @@ export const Home = () => (
         </Jumbo>
 
         <div className="newsLetter">
-            <p>Sign up to our newsletter</p>
-            {/*<Image src={newsletters}></Image>*/}
+            <p id="signUp">  Sign up to our newsletter</p>
+            <Image src={newsletters}></Image>
             <Button className="newsButton" variant="primary" size="lg">
                     -> Sign up
             </Button>{' '}
@@ -93,6 +128,8 @@ export const Home = () => (
             <p>About</p>
             <h3>Contact the Box office</h3>
             <p>For queries relating to you booking, please see our FAQs or contact us on:</p>
+            <h4>tickets@barbican.org.uk</h4>
+            <p>We aim to respong within 24 hrs</p>
         </div>
     </Styles>
 )
