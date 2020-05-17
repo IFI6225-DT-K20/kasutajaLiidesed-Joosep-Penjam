@@ -37,13 +37,6 @@ const Styles = styled.div `
         
     }
 
-    .newsButton{
-        color: #ff5900;
-        background-color: white;
-        border-color: #ff5900;
-        
-    }
-
     video{
         position: absolute; 
         right: 0; 
@@ -69,21 +62,29 @@ const Styles = styled.div `
 
     .newsLetter{
         background-color: #ff5900;
-        height: 150px;
+        height: 200px;
         font-weight: bold;
+        display: flex;
+        
         
     }
+
     #signUp{
         text-align: center;
         padding-left: 480px;
     }
 
+    .newsButton{
+        color: #ff5900;
+        background-color: white;
+        border-color: #ff5900;
+        height: 60px;
+        margin-top: 60px;
+    }
+
     img{
-        
         max-width:100%;
         max-height:100%;
-        padding-left: 40%;
-    
     }
     
     .footer{
@@ -92,8 +93,6 @@ const Styles = styled.div `
         color:white;
         padding-bottom: 10px;
         margin-bottom: 0;
-        
-
     }
 `;
 
